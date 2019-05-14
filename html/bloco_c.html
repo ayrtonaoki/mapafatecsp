@@ -1,16 +1,22 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Mapa Fatec-SP: Bloco C</title>
+  <title>Mapa Fatec-SP</title>
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <script type="text/javascript" src="../js/popper.min.js"></script>
   <script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" href="../index.html">Fatec-SP</a>
-    <div class="collapse navbar-collapse" id="navbarColor01">
+  <nav class="navbar navbar-expand-md  navbar-dark bg-dark sticky-top">
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapse_target">
+
+      <a class="navbar-brand" href="../index.html">Fatec-SP</a>
+
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="edificio_santiago.html">Edifício Santiago</a>
@@ -26,9 +32,11 @@
         </li>
       </ul>
       <div class="form-inline">
-        <a class="nav-link" href="tutorial.html">Tutorial</a>
-        <a class="nav-link" href="sobre.html">Sobre</a>
-        <a class="nav-link" href="contato.html">Contato</a>
+        <ul class="navbar-nav mr-auto">
+          <li><a class="nav-link" href="tutorial.html">Tutorial</a></li>
+          <li><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
       </div>
     </div>
   </nav>
