@@ -6,9 +6,3 @@ function selecionaLocal(local) {
 
 	document.getElementById(local).style.fill = '#007bff';
 }
-
-function teste2(path) {
-	if(path == 'estrela1') {
-		window.location.pathname = 'mapafatecsp/html/edificio_santiago.html';
-	}
-}
