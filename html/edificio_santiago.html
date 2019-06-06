@@ -5,18 +5,15 @@
   <script type="text/javascript" src="../js/popper.min.js"></script>
   <script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-md  navbar-dark bg-dark sticky-top">
-
     <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="collapse_target">
-
       <a class="navbar-brand" href="../index.html">Fatec-SP</a>
-
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="edificio_santiago.html">Edifício Santiago</a>
@@ -44,39 +41,54 @@
     <div class="card">
       <div class="card-body">
         <h2 class="card-title">Edifício Santiago</h2>
-        <ul>
-          <li>Térreo:</li>
-          <ul>
-            <li>Biblioteca/Mezanino (sala de estudos na biblioteca)</li>
-            <li>Sala de estudos</li>
-            <li>Secretaria</li>
-            <li>Armários</li>
-            <li>Bebedouro</li>
-          </ul>
-          <li>1º andar:</li>
-          <ul>
-            <li>Salas de aula: 11-S até 18-S</li>
-            <li>DTI - Departamento de Tecnologia de Informação</li>
-            <li>DEG - Departamento de Ensino Geral</li>
-            <li>Laboratório de Informática I</li>
-            <li>Banheiro masculino e feminino</li>
-            <li>Bebedouro</li>
-          </ul>
-          <li>2º andar:</li>
-          <ul>
-            <li>Salas de aula: 21-S até 28-S</li>
-            <li>Laboratórios de informática: II até V</li>
-            <li>Banheiro masculino e feminino</li>
-            <li>Bebedouro</li>
-          </ul>
-          <li>3º andar:</li>
-          <ul>
-            <li>Salas de aula: 31-S até 34-S</li>
-            <li>Seção de estágios</li>
-            <li>Banheiro masculino e feminino</li>
-            <li>Bebedouro</li>
-          </ul>
-        </ul>
+        <h5 class="card-title">Selecione o local desejado</h5>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('terreo')"> Térreo
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('primeiro_andar')"> 1º Andar
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('segundo_andar')"> 2º Andar
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('terceiro_andar')"> 3º Andar
+              </label>
+        </div>
+        <div class="dropdown"><br>
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Selecione...
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" onclick="selecionaLocal('entrada_principal', 'terreo')">Entrada principal</a>
+            <a class="dropdown-item" onclick="selecionaLocal('entrada_lateral', 'terreo')">Entrada lateral</a>
+            <a class="dropdown-item" onclick="selecionaLocal('sala_estudos', 'terreo')">Sala de estudo</a>
+            <a class="dropdown-item" onclick="selecionaLocal('biblioteca', 'terreo')">Biblioteca</a>
+            <a class="dropdown-item" onclick="selecionaLocal('secao_alunos', 'terreo')">Seção de alunos</a>
+            <a class="dropdown-item" onclick="selecionaLocal('secretaria', 'terreo')">Secretaria</a>
+            <a class="dropdown-item" onclick="selecionaLocal('secao_diplomas', 'terreo')">Seção de registro de diplomas</a>
+            <a class="dropdown-item" onclick="selecionaLocal('provaveis_formandos', 'terreo')">Prováveis formandos</a>
+            <a class="dropdown-item" onclick="selecionaLocal('administracao', 'terreo')">Administração</a>
+            <a class="dropdown-item" onclick="selecionaLocal('escada_principal', 'terreo')">Escada principal</a>
+            <a class="dropdown-item" onclick="selecionaLocal('escada_lateral', 'terreo')">Escada lateral</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevador_principal_1', 'terreo')">Elevador principal 1</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevador_principal_2', 'terreo')">Elevador principal 2</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevador_lateral', 'terreo')">Elevador lateral</a>
+            <a class="dropdown-item" onclick="selecionaLocal('jardim', 'terreo')">Jardim</a>
+            <!--<a class="dropdown-item" onclick="selecionaLocal('atividades_auxiliares', 'terreo')">Atividades auxiliares</a>
+            a class="dropdown-item" onclick="selecionaLocal('central_pabx', 'terreo')">Central PABX</a>
+            <a class="dropdown-item" onclick="selecionaLocal('banheiro', 'terreo')">Banheiro</a>
+            <a class="dropdown-item" onclick="selecionaLocal('copa', 'terreo')">Copa</a>
+             -->
+          </div>
+        </div><br>
+        <div class="card" style="width: 600px; height: 500px; margin: auto">
+          <iframe id="terreo" src="edificio_santiago/terreo.html" height="100%" frameborder="0" scrolling="no"></iframe>
+          <iframe id="primeiro_andar" src="edificio_santiago/primeiro_andar.html" style="display: none"></iframe>
+          <iframe id="segundo_andar" src="edificio_santiago/segundo_andar.html" style="display: none"></iframe>
+          <iframe id="terceiro_andar" src="edificio_santiago/terceiro_andar.html" style="display: none"></iframe>
+        </div>
       </div>
     </div>
   </div>
