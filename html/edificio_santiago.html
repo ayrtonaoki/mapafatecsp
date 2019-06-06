@@ -50,7 +50,7 @@
                 <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('mapaPrimeiroAndar', 'salasPrimeiroAndar')"> 1º Andar
               </label>
               <label class="btn btn-secondary">
-                <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('segundo_andar')"> 2º Andar
+                <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('mapaSegundoAndar', 'salasSegundoAndar')"> 2º Andar
               </label>
               <label class="btn btn-secondary">
                 <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('terceiro_andar')"> 3º Andar
@@ -112,10 +112,40 @@
              -->
           </div>
         </div>
+        <div id="salasSegundoAndar" class="dropdown" style="display: none">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Selecione...
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" onclick="selecionaLocal('sala21S', 'mapaSegundoAndar')">Sala 21-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('sala28S', 'mapaSegundoAndar')">Sala 28-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('sala22S', 'mapaSegundoAndar')">Sala 22-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('lab1', 'mapaSegundoAndar')">Laboratório 1</a>
+            <a class="dropdown-item" onclick="selecionaLocal('lab2', 'mapaSegundoAndar')">Laboratório 2</a>
+            <a class="dropdown-item" onclick="selecionaLocal('lab3', 'mapaSegundoAndar')">Laboratório 3</a>
+            <a class="dropdown-item" onclick="selecionaLocal('lab4', 'mapaSegundoAndar')">Laboratório 4</a>
+            <a class="dropdown-item" onclick="selecionaLocal('lab5', 'mapaSegundoAndar')">Laboratório 5</a>
+            <a class="dropdown-item" onclick="selecionaLocal('lab6', 'mapaSegundoAndar')">Laboratório 6</a>
+            <a class="dropdown-item" onclick="selecionaLocal('lab7', 'mapaSegundoAndar')">Laboratório 7</a>
+            <a class="dropdown-item" onclick="selecionaLocal('centralEstagios', 'mapaSegundoAndar')">Central de estágios</a>
+            <a class="dropdown-item" onclick="selecionaLocal('banheiroMasculino', 'mapaSegundoAndar')">Banheiro masculino</a>
+            <a class="dropdown-item" onclick="selecionaLocal('banheiroFeminino', 'mapaSegundoAndar')">Banheiro feminino</a>
+            <a class="dropdown-item" onclick="selecionaLocal('escadaPrincipal', 'mapaSegundoAndar')">Escada principal</a>
+            <a class="dropdown-item" onclick="selecionaLocal('escadaLateral', 'mapaSegundoAndar')">Escada lateral</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevadorPrincipal1', 'mapaSegundoAndar')">Elevador principal 1</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevadorPrincipal2', 'mapaSegundoAndar')">Elevador principal 2</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevadorLateral', 'mapaSegundoAndar')">Elevador lateral</a>
+            <a class="dropdown-item" onclick="selecionaLocal('camRelEmpresariais', 'mapaSegundoAndar')">Câmara de Relações Empresariais</a>
+            <a class="dropdown-item" onclick="selecionaLocal('depHumanidades', 'mapaSegundoAndar')">Departamento de humanidades</a>
+            <!--
+            <a class="dropdown-item" onclick="selecionaLocal('copa', 'mapaSegundoAndar')">Copa</a>
+             -->
+          </div>
+        </div>
         <div class="card mt-3" style="width: 600px; height: 500px; margin: auto">
           <iframe id="mapaTerreo" src="edificio_santiago/terreo.html" height="100%" frameborder="0" scrolling="no"></iframe>
           <iframe id="mapaPrimeiroAndar" src="edificio_santiago/primeiro_andar.html" height="100%" frameborder="0" scrolling="no" style="display: none"></iframe>
-          <iframe id="mapaSegundoAndar" src="edificio_santiago/segundo_andar.html" style="display: none"></iframe>
+          <iframe id="mapaSegundoAndar" src="edificio_santiago/segundo_andar.html" height="100%" frameborder="0" scrolling="no" style="display: none"></iframe>
           <iframe id="mapaTerceiroAndar" src="edificio_santiago/terceiro_andar.html" style="display: none"></iframe>
         </div>
       </div>
