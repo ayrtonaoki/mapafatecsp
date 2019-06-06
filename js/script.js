@@ -16,13 +16,17 @@ function selecionaLocal(local, andar) {
 	}
 };
 
-function mudaMapa(id) {
-	let andar = document.getElementById(id);
+function mudaMapa(mapa, salas) {
 	let totalMapas = document.getElementsByTagName('iframe');
+	let totalSalas = document.getElementsByClassName('dropdown');
 
 	for (i = 0; i < totalMapas.length; i++) {
 		totalMapas.item(i).style.display = 'none';
 	};
+	for (i = 0; i < totalSalas.length; i++) {
+		totalSalas.item(i).style.display = 'none';
+	};
 
-	andar.style.display = 'inline';
+	document.getElementById(mapa).style.display = 'inline';
+	document.getElementById(salas).style.display = 'inline';
 }
