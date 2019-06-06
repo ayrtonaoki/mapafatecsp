@@ -44,10 +44,10 @@
         <h5 class="card-title">Selecione o local desejado</h5>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-secondary active">
-                <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('terreo')"> Térreo
+                <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('mapaTerreo', 'salasTerreo')"> Térreo
               </label>
               <label class="btn btn-secondary">
-                <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('primeiro_andar')"> 1º Andar
+                <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('mapaPrimeiroAndar', 'salasPrimeiroAndar')"> 1º Andar
               </label>
               <label class="btn btn-secondary">
                 <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('segundo_andar')"> 2º Andar
@@ -56,38 +56,67 @@
                 <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('terceiro_andar')"> 3º Andar
               </label>
         </div>
-        <div class="dropdown"><br>
+        <br>
+        <br>
+        <div id="salasTerreo" class="dropdown">
           <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Selecione...
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" onclick="selecionaLocal('entrada_principal', 'terreo')">Entrada principal</a>
-            <a class="dropdown-item" onclick="selecionaLocal('entrada_lateral', 'terreo')">Entrada lateral</a>
-            <a class="dropdown-item" onclick="selecionaLocal('sala_estudos', 'terreo')">Sala de estudo</a>
-            <a class="dropdown-item" onclick="selecionaLocal('biblioteca', 'terreo')">Biblioteca</a>
-            <a class="dropdown-item" onclick="selecionaLocal('secao_alunos', 'terreo')">Seção de alunos</a>
-            <a class="dropdown-item" onclick="selecionaLocal('secretaria', 'terreo')">Secretaria</a>
-            <a class="dropdown-item" onclick="selecionaLocal('secao_diplomas', 'terreo')">Seção de registro de diplomas</a>
-            <a class="dropdown-item" onclick="selecionaLocal('provaveis_formandos', 'terreo')">Prováveis formandos</a>
-            <a class="dropdown-item" onclick="selecionaLocal('administracao', 'terreo')">Administração</a>
-            <a class="dropdown-item" onclick="selecionaLocal('escada_principal', 'terreo')">Escada principal</a>
-            <a class="dropdown-item" onclick="selecionaLocal('escada_lateral', 'terreo')">Escada lateral</a>
-            <a class="dropdown-item" onclick="selecionaLocal('elevador_principal_1', 'terreo')">Elevador principal 1</a>
-            <a class="dropdown-item" onclick="selecionaLocal('elevador_principal_2', 'terreo')">Elevador principal 2</a>
-            <a class="dropdown-item" onclick="selecionaLocal('elevador_lateral', 'terreo')">Elevador lateral</a>
-            <a class="dropdown-item" onclick="selecionaLocal('jardim', 'terreo')">Jardim</a>
-            <!--<a class="dropdown-item" onclick="selecionaLocal('atividades_auxiliares', 'terreo')">Atividades auxiliares</a>
-            a class="dropdown-item" onclick="selecionaLocal('central_pabx', 'terreo')">Central PABX</a>
-            <a class="dropdown-item" onclick="selecionaLocal('banheiro', 'terreo')">Banheiro</a>
-            <a class="dropdown-item" onclick="selecionaLocal('copa', 'terreo')">Copa</a>
+            <a class="dropdown-item" onclick="selecionaLocal('entradaPrincipal', 'mapaTerreo')">Entrada principal</a>
+            <a class="dropdown-item" onclick="selecionaLocal('entradaLateral', 'mapaTerreo')">Entrada lateral</a>
+            <a class="dropdown-item" onclick="selecionaLocal('salaEstudos', 'mapaTerreo')">Sala de estudo</a>
+            <a class="dropdown-item" onclick="selecionaLocal('biblioteca', 'mapaTerreo')">Biblioteca</a>
+            <a class="dropdown-item" onclick="selecionaLocal('secaoAlunos', 'mapaTerreo')">Seção de alunos</a>
+            <a class="dropdown-item" onclick="selecionaLocal('secretaria', 'mapaTerreo')">Secretaria</a>
+            <a class="dropdown-item" onclick="selecionaLocal('secaoDiplomas', 'mapaTerreo')">Seção de registro de diplomas</a>
+            <a class="dropdown-item" onclick="selecionaLocal('provaveisFormandos', 'mapaTerreo')">Prováveis formandos</a>
+            <a class="dropdown-item" onclick="selecionaLocal('administracao', 'mapaTerreo')">Administração</a>
+            <a class="dropdown-item" onclick="selecionaLocal('escadaPrincipal', 'mapaTerreo')">Escada principal</a>
+            <a class="dropdown-item" onclick="selecionaLocal('escadaLateral', 'mapaTerreo')">Escada lateral</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevadorPrincipal1', 'mapaTerreo')">Elevador principal 1</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevadorPrincipal2', 'mapaTerreo')">Elevador principal 2</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevadorLateral', 'mapaTerreo')">Elevador lateral</a>
+            <a class="dropdown-item" onclick="selecionaLocal('jardim', 'mapaTerreo')">Jardim</a>
+            <!--<a class="dropdown-item" onclick="selecionaLocal('atividades_auxiliares', 'mapaTerreo')">Atividades auxiliares</a>
+            a class="dropdown-item" onclick="selecionaLocal('central_pabx', 'mapaTerreo')">Central PABX</a>
+            <a class="dropdown-item" onclick="selecionaLocal('banheiro', 'mapaTerreo')">Banheiro</a>
+            <a class="dropdown-item" onclick="selecionaLocal('copa', 'mapaTerreo')">Copa</a>
              -->
           </div>
-        </div><br>
-        <div class="card" style="width: 600px; height: 500px; margin: auto">
-          <iframe id="terreo" src="edificio_santiago/terreo.html" height="100%" frameborder="0" scrolling="no"></iframe>
-          <iframe id="primeiro_andar" src="edificio_santiago/primeiro_andar.html" style="display: none"></iframe>
-          <iframe id="segundo_andar" src="edificio_santiago/segundo_andar.html" style="display: none"></iframe>
-          <iframe id="terceiro_andar" src="edificio_santiago/terceiro_andar.html" style="display: none"></iframe>
+        </div>
+        <div id="salasPrimeiroAndar" class="dropdown" style="display: none">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Selecione...
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" onclick="selecionaLocal('sala11S', 'mapaPrimeiroAndar')">Sala 11-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('sala12S', 'mapaPrimeiroAndar')">Sala 12-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('sala13S', 'mapaPrimeiroAndar')">Sala 13-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('sala14S', 'mapaPrimeiroAndar')">Sala 14-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('depEnsinoGeral', 'mapaPrimeiroAndar')">Departamento Geral de Ensino</a>
+            <a class="dropdown-item" onclick="selecionaLocal('depTI', 'mapaPrimeiroAndar')">Departamento de TI</a>
+            <a class="dropdown-item" onclick="selecionaLocal('depMateriais', 'mapaPrimeiroAndar')">Departamento de Materiais</a>
+            <a class="dropdown-item" onclick="selecionaLocal('salaProfTI', 'mapaPrimeiroAndar')">Sala dos Prof. de TI</a>
+            <a class="dropdown-item" onclick="selecionaLocal('salaProfMat', 'mapaPrimeiroAndar')">Sala dos Prof. de Matemática</a>
+            <a class="dropdown-item" onclick="selecionaLocal('salaProfResMatQui', 'mapaPrimeiroAndar')">Sala dos Prof. de Res. Mat. e Química</a>
+            <a class="dropdown-item" onclick="selecionaLocal('banheiroFeminino', 'mapaPrimeiroAndar')">Banheiro Feminino</a>
+            <a class="dropdown-item" onclick="selecionaLocal('banheiroMasculino', 'mapaPrimeiroAndar')">Banheiro Masculino</a>
+            <a class="dropdown-item" onclick="selecionaLocal('escadaPrincipal', 'mapaPrimeiroAndar')">Escada principal</a>
+            <a class="dropdown-item" onclick="selecionaLocal('escadaLateral', 'mapaPrimeiroAndar')">Escada lateral</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevadorPrincipal1', 'mapaPrimeiroAndar')">Elevador principal 1</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevadorPrincipal2', 'mapaPrimeiroAndar')">Elevador principal 2</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevadorLateral', 'mapaPrimeiroAndar')">Elevador lateral</a>
+            <!--
+            <a class="dropdown-item" onclick="selecionaLocal('copa', 'mapaPrimeiroAndar')">Copa</a>
+             -->
+          </div>
+        </div>
+        <div class="card mt-3" style="width: 600px; height: 500px; margin: auto">
+          <iframe id="mapaTerreo" src="edificio_santiago/terreo.html" height="100%" frameborder="0" scrolling="no"></iframe>
+          <iframe id="mapaPrimeiroAndar" src="edificio_santiago/primeiro_andar.html" height="100%" frameborder="0" scrolling="no" style="display: none"></iframe>
+          <iframe id="mapaSegundoAndar" src="edificio_santiago/segundo_andar.html" style="display: none"></iframe>
+          <iframe id="mapaTerceiroAndar" src="edificio_santiago/terceiro_andar.html" style="display: none"></iframe>
         </div>
       </div>
     </div>
