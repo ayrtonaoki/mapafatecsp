@@ -53,7 +53,7 @@
                 <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('mapaSegundoAndar', 'salasSegundoAndar')"> 2º Andar
               </label>
               <label class="btn btn-secondary">
-                <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('terceiro_andar')"> 3º Andar
+                <input type="radio" name="options" autocomplete="off" onchange="mudaMapa('mapaTerceiroAndar', 'salasTerceiroAndar')"> 3º Andar
               </label>
         </div>
         <br>
@@ -142,11 +142,38 @@
              -->
           </div>
         </div>
+        <div id="salasTerceiroAndar" class="dropdown" style="display: none">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Selecione...
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" onclick="selecionaLocal('sala30S', 'mapaTerceiroAndar')">Sala 30-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('sala31S', 'mapaTerceiroAndar')">Sala 31-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('sala32S', 'mapaTerceiroAndar')">Sala 32-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('sala33S', 'mapaTerceiroAndar')">Sala 33-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('sala34S', 'mapaTerceiroAndar')">Sala 34-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('sala35S', 'mapaTerceiroAndar')">Sala 35-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('sala36S', 'mapaTerceiroAndar')">Sala 36-S</a>
+            <a class="dropdown-item" onclick="selecionaLocal('salaAula', 'mapaTerceiroAndar')">Sala de aula</a>
+            <a class="dropdown-item" onclick="selecionaLocal('labI', 'mapaTerceiroAndar')">Laboratório I</a>             
+            <a class="dropdown-item" onclick="selecionaLocal('labII', 'mapaTerceiroAndar')">Laboratório II</a>
+            <a class="dropdown-item" onclick="selecionaLocal('salaProfEletrica', 'mapaTerceiroAndar')">Sala dos Prof. de elétrica</a>
+            <a class="dropdown-item" onclick="selecionaLocal('banheiroMasculino', 'mapaTerceiroAndar')">Banheiro masculino</a>
+            <a class="dropdown-item" onclick="selecionaLocal('banheiroFeminino', 'mapaTerceiroAndar')">Banheiro feminino</a>
+            <a class="dropdown-item" onclick="selecionaLocal('escadaPrincipal', 'mapaTerceiroAndar')">Escada principal</a>
+            <a class="dropdown-item" onclick="selecionaLocal('escadaLateral', 'mapaTerceiroAndar')">Escada lateral</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevadorPrincipal1', 'mapaTerceiroAndar')">Elevador principal 1</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevadorPrincipal2', 'mapaTerceiroAndar')">Elevador principal 2</a>
+            <a class="dropdown-item" onclick="selecionaLocal('elevadorLateral', 'mapaTerceiroAndar')">Elevador lateral</a>
+            <a class="dropdown-item" onclick="selecionaLocal('almoxarifado', 'mapaTerceiroAndar')">Almoxarifado</a>
+            <!-- <a class="dropdown-item" onclick="selecionaLocal('deposito', 'mapaTerceiroAndar')">Depósito</a> -->
+          </div>
+        </div>
         <div class="card mt-3" style="width: 600px; height: 500px; margin: auto">
           <iframe id="mapaTerreo" src="edificio_santiago/terreo.html" height="100%" frameborder="0" scrolling="no"></iframe>
           <iframe id="mapaPrimeiroAndar" src="edificio_santiago/primeiro_andar.html" height="100%" frameborder="0" scrolling="no" style="display: none"></iframe>
           <iframe id="mapaSegundoAndar" src="edificio_santiago/segundo_andar.html" height="100%" frameborder="0" scrolling="no" style="display: none"></iframe>
-          <iframe id="mapaTerceiroAndar" src="edificio_santiago/terceiro_andar.html" style="display: none"></iframe>
+          <iframe id="mapaTerceiroAndar" src="edificio_santiago/terceiro_andar.html" height="100%" frameborder="0" scrolling="no" style="display: none"></iframe>
         </div>
       </div>
     </div>
