@@ -5,6 +5,7 @@
   <script type="text/javascript" src="../js/popper.min.js"></script>
   <script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-md  navbar-dark bg-dark sticky-top">
@@ -44,56 +45,94 @@
     <div class="card">
       <div class="card-body">
         <h2 class="card-title">Bloco B</h2>
-        <ul>
-          <li>Térreo:</li>
-          <ul>
-            <li>Recepção</li>
-            <li>Acesso aos elevadores</li>
-            <li>Acesso às escadas</li>
-            <li>Sala verde</li>
-            <li>Laboratório de mecânica</li>
+        
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary active">
+            <input type="radio" name="options" autocomplete="off" onchange="mudaListaSalas('terreo')"> Térreo
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" autocomplete="off" onchange="mudaListaSalas('primeiroAndar')"> 1º Andar
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" autocomplete="off" onchange="mudaListaSalas('segundoAndar')"> 2º Andar
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" autocomplete="off" onchange="mudaListaSalas('terceiroAndar')"> 3º Andar
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" autocomplete="off" onchange="mudaListaSalas('quartoAndar')"> 4º Andar
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" autocomplete="off" onchange="mudaListaSalas('quintoAndar')"> 5º Andar
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" autocomplete="off" onchange="mudaListaSalas('sextoAndar')"> 6º Andar
+          </label>
+        </div>
+        <div class="mt-3 h5">
+          <ul class="list-group" id="listaSalas">
+            <ul class="list-group" id="terreo">
+              <li class="list-group-item">Recepção</li>
+              <li class="list-group-item">Laboratório de Automação</li>
+              <li class="list-group-item">Acesso aos Laboratórios</li>
+              <li class="list-group-item">Acesso aos elevadores</li>
+              <li class="list-group-item">Acesso às escadas</li>
+              <li class="list-group-item">Acesso ao estacionamento</li>
+            </ul>
+            <ul class="list-group" id="primeiroAndar" style="display: none">
+              <li class="list-group-item">Salas 11-B a 20-B</li>
+              <li class="list-group-item">Acesso aos elevadores</li>
+              <li class="list-group-item">Acesso às escadas</li>
+              <li class="list-group-item">Sanitários</li>
+            </ul>
+            <ul class="list-group" id="segundoAndar" style="display: none">
+              <li class="list-group-item">Salas 21-B a 28-B</li>
+              <li class="list-group-item">Laboratório CAD / DCC</li>
+              <li class="list-group-item">DTCV</li>
+              <li class="list-group-item">Acesso aos elevadores</li>
+              <li class="list-group-item">Acesso às escadas</li>
+              <li class="list-group-item">Sanitários</li>
+            </ul>          
+            <ul class="list-group" id="terceiroAndar" style="display: none">
+              <li class="list-group-item">Salas 31-B a 38-B</li>
+              <li class="list-group-item">Sala Ascensoristas</li>
+              <li class="list-group-item">Laboratório CMP I e II</li>
+              <li class="list-group-item">Acesso aos elevadores</li>
+              <li class="list-group-item">Acesso às escadas</li>
+              <li class="list-group-item">Sanitários</li>
+            </ul>          
+            <ul class="list-group" id="quartoAndar" style="display: none">
+              <li class="list-group-item">Salas 41-B</li>
+              <li class="list-group-item">Laboratório Optica I e II</li>
+              <li class="list-group-item">Laboratório Did. Física I e II</li>
+              <li class="list-group-item">Laboratório Vidros e Datação</li>
+              <li class="list-group-item">Acesso aos elevadores</li>
+              <li class="list-group-item">Acesso às escadas</li>
+              <li class="list-group-item">Sanitários</li>
+            </ul>          
+            <ul class="list-group" id="quintoAndar" style="display: none">
+              <li class="list-group-item">Salas 51-B a 59-B</li>
+              <li class="list-group-item">Laboratório Línguas</li>
+              <li class="list-group-item">Acesso aos elevadores</li>
+              <li class="list-group-item">Acesso às escadas</li>
+              <li class="list-group-item">Sanitários</li>
+            </ul>
+            <ul class="list-group" id="sextoAndar" style="display: none">
+              <li class="list-group-item">Diretoria</li>
+              <li class="list-group-item">Assist. Téc. Adm</li>
+              <li class="list-group-item">CPCT</li>
+              <li class="list-group-item">Assessoria de Horários</li>
+              <li class="list-group-item">Câmara de Ensino</li>
+              <li class="list-group-item">PDA</li>
+              <li class="list-group-item">Assist. Téc. Docente</li>
+              <li class="list-group-item">CEPE</li>
+              <li class="list-group-item">Acesso aos elevadores</li>
+              <li class="list-group-item">Acesso às escadas</li>
+              <li class="list-group-item">Sanitários</li>
+            </ul>
           </ul>
-          <li>1º andar:</li>
-          <ul>
-            <li>Acesso aos elevadores</li>
-            <li>Acesso às escadas</li>
-            <li>Salas de aula: 11-B até 18-B</li>
-            <li>Banheiro masculino e feminino</li>
-            <li>Bebedouro</li>
-          </ul>
-          <li>2º andar:</li>
-          <ul>
-            <li>Acesso aos elevadores</li>
-            <li>Acesso às escadas</li>
-            <li>Salas de aula: 21-B até 28-B</li>
-            <li>Banheiro masculino e feminino</li>
-            <li>Bebedouro</li>
-          </ul>          
-          <li>3º andar:</li>
-          <ul>
-            <li>Acesso aos elevadores</li>
-            <li>Acesso às escadas</li>
-            <li>Salas de aula: 31-B até 38-B</li>
-            <li>Banheiro masculino e feminino</li>
-            <li>Bebedouro</li>
-          </ul>          
-          <li>4º andar:</li>
-          <ul>
-            <li>Acesso aos elevadores</li>
-            <li>Acesso às escadas</li>
-            <li>Salas de aula: 41-B até 48-B</li>
-            <li>Banheiro masculino e feminino</li>
-            <li>Bebedouro</li>
-          </ul>          
-          <li>5º andar:</li>
-          <ul>
-            <li>Acesso aos elevadores</li>
-            <li>Acesso às escadas</li>
-            <li>Salas de aula: 51-B até 58-B</li>
-            <li>Banheiro masculino e feminino</li>
-            <li>Bebedouro</li>
-          </ul>
-        </ul>
+        </div>
+
       </div>
     </div>
   </div>
