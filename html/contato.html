@@ -8,15 +8,11 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-md  navbar-dark bg-dark sticky-top">
-
     <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="collapse_target">
-
       <a class="navbar-brand" href="../index.html">Fatec-SP</a>
-
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="edificio_santiago.html">Edifício Santhiago</a>
@@ -46,47 +42,33 @@
         <h2 class="card-title">Contato</h2>
         <h5 class="card-subtitle mb-2 text-muted">Entre em contato conosco para tirar dúvidas e/ou sugerir melhorias para o nosso projeto!
         </h5><br>
-        <form>
+        <form action="https://formspree.io/ayrtonsasouza@gmail.com" method="POST">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email:</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o seu Email">
+            <label>Nome (Opcional):</label>
+            <input type="text" name="name" class="form-control"  placeholder="Digite o seu nome">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Assunto:</label>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Selecione o assunto
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Dúvida sobre o mapa</a>
-                <a class="dropdown-item" href="#">Sugestão de melhorias</a>
-                <a class="dropdown-item" href="#">Outros</a>
-              </div>
-            </div>
+            <label>Email:</label>
+            <input type="email" name="email" class="form-control"  placeholder="Digite o seu Email">
           </div>
-
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Digite sua mensagem:</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label>Assunto:</label>
+            <select type="text" name="subject" class="form-control">
+              <option>Selecione um assunto</option>
+              <option>Dúvidas sobre o site</option>
+              <option>Sugestão de melhorias e novas ideias</option>
+              <option>Quero participar do projeto</option>
+              <option>Feedback sobre projeto</option>
+              <option>Outros</option>
+            </select>
           </div>
-
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <div class="form-group">
+            <label>Mensagem:</label>
+            <textarea name="message" class="form-control" rows="3" placeholder="Digite sua mensagem"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" value="Send">Enviar</button>
+          <input type="hidden" name="_next" value="https://ayrtonaoki.github.io/mapafatecsp/html/contato.html"/>
         </form>
-
-
-<form action="https://formspree.io/ayrtonsasouza@gmail.com" method="POST">
-  <label>Nome</label>
-  <input type="text" name="name">
-  <label>Email</label>
-  <input type="email" name="email ">
-  <label>Assunto</label>
-  <input type="text" name="subject"/>
-  <label>Mensagem</label>
-  <textarea name="message" row="5"></textarea>
-  <input type="submit" value="Send">
-  <input type="hidden" name="_next" value="https://ayrtonaoki.github.io/mapafatecsp/html/contato.html"/>
-</form>
-
       </div>
     </div>
   </div>
