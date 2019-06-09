@@ -29,4 +29,15 @@ function mudaMapa(mapa, salas) {
 
 	document.getElementById(mapa).style.display = 'inline';
 	document.getElementById(salas).style.display = 'inline';
+};
+
+function mudaListaSalas(andar) {
+	let totalSalas = document.getElementsByClassName('list-group');
+
+	for (i = 0; i < totalSalas.length; i++) {
+		totalSalas.item(i).style.display = 'none';
+	};
+
+	document.getElementById('listaSalas').style.display = 'block';
+	document.getElementById(andar).style.display = 'block';
 }
