@@ -50,47 +50,48 @@
           <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Selecione...
           </button>
+          <h5 class="inline" id="localSelecionado" style="display: none"></h5>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" onclick="selecionaLocal('entrada_principal')">Entrada principal</a>
-            <a class="dropdown-item" onclick="selecionaLocal('santiago')">Edifício Santhiago</a>
-            <a class="dropdown-item" onclick="selecionaLocal('bloco_a')">Bloco A</a>
-            <a class="dropdown-item" onclick="selecionaLocal('bloco_b')">Bloco B</a>
-            <a class="dropdown-item" onclick="selecionaLocal('bloco_c')">Bloco C - Anfiteatro - Quadra</a>
-            <a class="dropdown-item" onclick="selecionaLocal('bloco_d')">Bloco D - Cantina</a>
-            <a class="dropdown-item" onclick="selecionaLocal('ca')">Entrada do Centro Acadêmico (CA)</a>
-            <a class="dropdown-item" onclick="selecionaLocal('etesp')">ETESP (Edifício Ary Torres)</a>
-            <a class="dropdown-item" onclick="selecionaLocal('pos_graduacao')">Pós-Graduação FATEC-SP</a>
-            <a class="dropdown-item" onclick="selecionaLocal('sala_lab')">Salas e laboratórios</a>
-            <a class="dropdown-item" onclick="selecionaLocal('lab_oficina')">Laboratórios e oficinas</a>
-            <a class="dropdown-item" onclick="selecionaLocal('paula_souza')">Edifício Paula Souza</a>
-            <a class="dropdown-item" onclick="selecionaLocal('oscar_machado')">Edifício Oscar Machado</a>
-            <a class="dropdown-item" onclick="selecionaLocal('francisco_maffei')">Edifício Francisco Maffei</a>
-            <a class="dropdown-item" onclick="selecionaLocal('ad_fatec')">AD FATEC</a>
-            <a class="dropdown-item" onclick="selecionaLocal('cci')">CCI - Centro de Convivência Infantil</a>
-            <a class="dropdown-item" onclick="selecionaLocal('garagem')">Garagem do CEETEPS</a>
-            <a class="dropdown-item" onclick="selecionaLocal('predio_prefeitura')">Prédio Prefeitura</a>
+            <a id="_entradaPrincipal" class="dropdown-item" onclick="selecionaLocal('entradaPrincipal')">Entrada principal</a>
+            <a id="_santiago" class="dropdown-item" onclick="selecionaLocal('santiago')">Edifício Santhiago</a>
+            <a id="_blocoA" class="dropdown-item" onclick="selecionaLocal('blocoA')">Bloco A</a>
+            <a id="_blocoB" class="dropdown-item" onclick="selecionaLocal('blocoB')">Bloco B</a>
+            <a id="_blocoC" class="dropdown-item" onclick="selecionaLocal('blocoC')">Bloco C - Anfiteatro - Quadra</a>
+            <a id="_blocoD" class="dropdown-item" onclick="selecionaLocal('blocoD')">Bloco D - Cantina</a>
+            <a id="_ca" class="dropdown-item" onclick="selecionaLocal('ca')">Entrada do Centro Acadêmico (CA)</a>
+            <a id="_etesp" class="dropdown-item" onclick="selecionaLocal('etesp')">ETESP (Edifício Ary Torres)</a>
+            <a id="_posGraduacao" class="dropdown-item" onclick="selecionaLocal('posGraduacao')">Pós-Graduação FATEC-SP</a>
+            <a id="_salaLab" class="dropdown-item" onclick="selecionaLocal('salaLab')">Salas e laboratórios</a>
+            <a id="_labOficina" class="dropdown-item" onclick="selecionaLocal('labOficina')">Laboratórios e oficinas</a>
+            <a id="_paulaSouza" class="dropdown-item" onclick="selecionaLocal('paulaSouza')">Edifício Paula Souza</a>
+            <a id="_oscarMachado" class="dropdown-item" onclick="selecionaLocal('oscarMachado')">Edifício Oscar Machado</a>
+            <a id="_franciscoMaffei" class="dropdown-item" onclick="selecionaLocal('franciscoMaffei')">Edifício Francisco Maffei</a>
+            <a id="_adFatec" class="dropdown-item" onclick="selecionaLocal('adFatec')">AD FATEC</a>
+            <a id="_cci" class="dropdown-item" onclick="selecionaLocal('cci')">CCI - Centro de Convivência Infantil</a>
+            <a id="_garagem" class="dropdown-item" onclick="selecionaLocal('garagem')">Garagem do CEETEPS</a>
+            <a id="_predioPrefeitura" class="dropdown-item" onclick="selecionaLocal('predioPrefeitura')">Prédio Prefeitura</a>
           </div>
         </div><br>
         <div class="card" style="width: 600px; margin: auto">
           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="600px" height="500px" viewBox="0 0 600 500" enable-background="new 0 0 600 500" xml:space="preserve">
             <rect id="santiago" x="40.75" y="310.761" fill="#545B62" width="128" height="104"/>
-            <rect id="bloco_c" x="193.75" y="212.26" fill="#545B62" width="97.141" height="164"/>
-            <rect id="bloco_b" x="290.891" y="212.26" fill="#545B62" width="68.359" height="164"/>
-            <rect id="bloco_a" x="359.25" y="212.26" fill="#545B62" width="62.5" height="164"/>
-            <rect id="paula_souza" x="40.75" y="185.26" fill="#545B62" width="105.5" height="109"/>
-            <rect id="oscar_machado" x="40.75" y="73.76" fill="#545B62" width="147.5" height="94"/>
+            <rect id="blocoC" x="193.75" y="212.26" fill="#545B62" width="97.141" height="164"/>
+            <rect id="blocoB" x="290.891" y="212.26" fill="#545B62" width="68.359" height="164"/>
+            <rect id="blocoA" x="359.25" y="212.26" fill="#545B62" width="62.5" height="164"/>
+            <rect id="paulaSouza" x="40.75" y="185.26" fill="#545B62" width="105.5" height="109"/>
+            <rect id="oscarMachado" x="40.75" y="73.76" fill="#545B62" width="147.5" height="94"/>
             <rect id="etesp" x="296.75" y="80.26" fill="#545B62" width="57.5" height="78.5"/>
             <rect id="cci" x="296.75" y="172.26" fill="#545B62" width="57.5" height="20"/>
-            <rect id="bloco_d" x="371.25" y="172.26" fill="#545B62" width="68" height="25.5"/>
-            <rect id="francisco_maffei" x="371.25" y="82.76" fill="#545B62" width="87.5" height="89.5"/>
-            <rect id="lab_oficina"x="168.75" y="34.76" fill="#545B62" width="270.5" height="24.5"/>
+            <rect id="blocoD" x="371.25" y="172.26" fill="#545B62" width="68" height="25.5"/>
+            <rect id="franciscoMaffei" x="371.25" y="82.76" fill="#545B62" width="87.5" height="89.5"/>
+            <rect id="labOficina"x="168.75" y="34.76" fill="#545B62" width="270.5" height="24.5"/>
             <rect id="garagem" x="449.25" y="34.76" fill="#545B62" width="110" height="30.5"/>
-            <rect id="pos_graduacao" x="500.5" y="81.5" fill="#545B62" width="58" height="92"/>
-            <rect id="sala_lab" x="468.75" y="142.76" fill="#545B62" width="32.5" height="29.5"/>
-            <rect id="ad_fatec" x="212.25" y="73.76" fill="#545B62" width="66" height="23.5"/>
-            <rect id="predio_prefeitura"x="439.25" y="172.26" fill="#545B62" width="120" height="242.5"/>
-            <rect id="entrada_principal" x="40.75" y="442.538" fill="#545B62" width="518.5" height="22.702"/>
+            <rect id="posGraduacao" x="500.5" y="81.5" fill="#545B62" width="58" height="92"/>
+            <rect id="salaLab" x="468.75" y="142.76" fill="#545B62" width="32.5" height="29.5"/>
+            <rect id="adFatec" x="212.25" y="73.76" fill="#545B62" width="66" height="23.5"/>
+            <rect id="predioPrefeitura"x="439.25" y="172.26" fill="#545B62" width="120" height="242.5"/>
+            <rect id="entradaPrincipal" x="40.75" y="442.538" fill="#545B62" width="518.5" height="22.702"/>
             <text transform="matrix(1 0 0 1 181.0669 457.6719)" fill="#FFFFFF" font-family="'ArialMT'" font-size="12">ENTRADA PRINCIPAL  - AV. TIRADENTES</text>
             <rect id="ca" x="40" y="275.5" fill="#545B62" width="23.5" height="20"/>
           </svg>

@@ -5,6 +5,8 @@ function selecionaLocal(local, andar) {
 			totalPredios.item(i).style.fill = '#545B62';
 		};
 		document.getElementById(andar).contentWindow.document.getElementById(local).style.fill = '#007bff';
+		document.getElementById('localSelecionado').style.display = 'block';
+		document.getElementById('localSelecionado').innerHTML = document.getElementById('_' + local).innerHTML;
 	}
 	else {
 		let totalPredios = document.getElementsByTagName('rect');
@@ -13,6 +15,8 @@ function selecionaLocal(local, andar) {
 		};
 
 		document.getElementById(local).style.fill = '#007bff';
+		document.getElementById('localSelecionado').style.display = 'block';
+		document.getElementById('localSelecionado').innerHTML = document.getElementById('_' + local).innerHTML;
 	}
 };
 
@@ -22,6 +26,7 @@ function mudaMapa(mapa, salas) {
 
 	for (i = 0; i < totalMapas.length; i++) {
 		totalMapas.item(i).style.display = 'none';
+		totalMapas.item(i).src = totalMapas.item(i).src;
 	};
 	for (i = 0; i < totalSalas.length; i++) {
 		totalSalas.item(i).style.display = 'none';
@@ -29,6 +34,7 @@ function mudaMapa(mapa, salas) {
 
 	document.getElementById(mapa).style.display = 'inline';
 	document.getElementById(salas).style.display = 'inline';
+	document.getElementById('localSelecionado').style.display = 'none';
 };
 
 function mudaListaSalas(andar) {
@@ -42,8 +48,7 @@ function mudaListaSalas(andar) {
 	document.getElementById(andar).style.display = 'block';
 };
 
-function validaFormulario()								 
-{ 
+function validaFormulario() { 
 	var name = document.forms["formulario"]["nome"];			 
 	var email = document.forms["formulario"]["email"]; 
 	var assunto = document.forms["formulario"]["assunto"]; 
