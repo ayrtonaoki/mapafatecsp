@@ -40,4 +40,12 @@ function mudaListaSalas(andar) {
 
 	document.getElementById('listaSalas').style.display = 'block';
 	document.getElementById(andar).style.display = 'block';
-}
+};
+
+function verificaFormulario(form, mensagem) {
+	let mensagem = document.forms[form][mensagem].value;
+	if (mensagem == "") {
+		alert("Digite uma mensagem para enviar o email!");
+		return false;
+	}
+};
