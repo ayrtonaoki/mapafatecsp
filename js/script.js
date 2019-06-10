@@ -42,10 +42,47 @@ function mudaListaSalas(andar) {
 	document.getElementById(andar).style.display = 'block';
 };
 
-function verificaFormulario(form, mensagem) {
-	let mensagem = document.forms[form][mensagem].value;
-	if (mensagem == "") {
-		alert("Digite uma mensagem para enviar o email!");
-		return false;
+function validaFormulario()								 
+{ 
+	var name = document.forms["formulario"]["nome"];			 
+	var email = document.forms["formulario"]["email"]; 
+	var assunto = document.forms["formulario"]["assunto"]; 
+	var address = document.forms["formulario"]["mensagem"]; 
+
+	if (email.value == "")								 
+	{ 
+		window.alert("Por favor, digite um e-mail válido!"); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (email.value.indexOf("@", 0) < 0)				 
+	{ 
+		window.alert("Por favor, digite um e-mail válido!"); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (email.value.indexOf(".", 0) < 0)				 
+	{ 
+		window.alert("Por favor, digite um e-mail válido!"); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (assunto.value == "Selecione um assunto")								 
+	{ 
+		window.alert("Por favor, selecione um Assunto!"); 
+		assunto.focus(); 
+		return false; 
 	}
+
+	if (mensagem.value == "")					 
+	{ 
+		window.alert("Por favor, digite uma mensagem!"); 
+		mensagem.focus(); 
+		return false; 
+	} 
+
+	return true; 
 };
