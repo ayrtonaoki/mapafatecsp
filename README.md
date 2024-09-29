@@ -27,4 +27,4 @@ Project created for the thesis at the São Paulo State Technology College (Fatec
 - Clone the repository: `git clone git@github.com:ayrtonaoki/mapafatecsp.git`
 - Enter the project folder: `cd mapafatecsp`
 - Run: `http-server`
-- Access it in your browser at: `localhost:8080`
+- Access through the browser: `localhost:8080`
